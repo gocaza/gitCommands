@@ -1,0 +1,50 @@
+add all modified, added and removed files files
+*	git add -u
+
+show all branches
+*	git branch --all
+
+switch to new branch
+*	git switch <BRANCHNAME>   older command was checkout
+
+* HEAD~n: represents the nth last commit, so HEAD~1 represents the last commit
+
+Undo changes
+*	git revert <commit>
+
+Diff / compare
+*	git diff <commit1> <commit2>
+
+Add all
+*	git add .
+
+Go backt to a previous version / undo
+*	git reset --hard <commit>   revert code back to a previous commit
+*	git reset --hard origin/master   revert code back to remote repository version
+
+Push an existing repo to github
+*	git remote add origin git@github.com:<name>/<repo>.git
+*	git branch -M main  //specify the name of main branch
+*	git push -u origin main  //-u = --set-upstream only needed the first time you push
+
+Download and merge (fetch and merge)
+*	git pull
+
+create a branch
+*	git branch <branch-name>
+
+pushing a branch for the first time
+*	git push -u origin <branch-name>
+
+merge conflicts
+the current version of the code is what's between <<<<<< and =====, while the incoming version is between ==== and >>>>>>
+
+add and commit changed files
+*	git commit -am "message"
+
+merge
+*	git merge <branch_name>   merges the branch bracnh_name with the current branch we are on
+*	git merge --abort   to cancel the merge
+
+delet branch
+*	git branch -D <branch-name>
