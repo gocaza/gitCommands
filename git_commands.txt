@@ -14,6 +14,13 @@ Undo changes
 
 Diff / compare
 *	git diff <commit1> <commit2>
+*	git diff HEAD                   compare working with history
+*	git diff --staged               compare stage area with history
+*	git diff                        compare between working and stage area
+*	git diff --color-words          shows the part that was modified with colors
+*	git diff origin/main main       compares remote main with local main
+*	git diff main branch            compare main agains branch
+*	git diff <commit1> <commit2> <filename> compare file fom 2 commits
 
 Add all
 *	git add .
@@ -55,3 +62,39 @@ deleted branch on remote and get this into local repo
 
 show merged branches
 *	git branch --merged
+
+logging seeing commits
+*	git log --oneline
+*	git log --oneline --decorate
+
+move files
+*	git mv <filename> <location>
+
+move some part of the files that have been change to stage area, other part wont be committed on this commit, but can be committed on different commit
+*	git add -p <filename>   (--patch)
+
+Tags
+*	git tag <tag name> <SHA>
+*	git tag -a <tag name> <SHA or empty for latest>   annotated tag, lets you write more desription
+*	git push --tags
+*	git config --global push.followTags true   automatically pushes tag when you use push operations
+
+Fix a commit / change a commit (works if commit hasn't been pushed)
+*	git commit --amend
+
+Reset
+*	git reset --soft HEAD~2   remove the commit from HEAD back 2 steps but keeps the changes on stage
+*	git reset --mixed HEAD~2  remove the commit from HEAD back 2 steps but keep changes on working area
+*	git reset --hard HEAD~2   remove the commit from HEAD back 2 steps and deletes all files from deletes commits
+
+reference log - which operations happen on local repo
+*	git reflog
+
+get one commit 
+*	git cherry-pick <SHA> 
+
+
+remove a file from stage
+*	git rm --cached <filename>
+
+for d in {1..6}; do touch "file${d}.md"; git add "file${d}.md; git commit -m "adding file ${d}"; done
