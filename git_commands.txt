@@ -98,3 +98,7 @@ remove a file from stage
 *	git rm --cached <filename>
 
 for d in {1..6}; do touch "file${d}.md"; git add "file${d}.md; git commit -m "adding file ${d}"; done
+
+* In order to host a webpage (github pages) inside github, create a repo with following name:
+  <username>.github.io
+  then on settings, scroll down, on github pages, you will see the name of the webpage
